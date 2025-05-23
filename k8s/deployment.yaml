@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: KIII_Lab8_Deployment
+  name: kiii-lab8-deployment
   labels:
-    app: KIII_Lab8
+    app: kiii-lab8
 spec:
   replicas: 5
   strategy:
@@ -13,14 +13,14 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: KIII_Lab8
+      app: kiii-lab8
   template:
     metadata:
       labels:
-        app: KIII_Lab8
+        app: kiii-lab8
     spec:
       containers:
-      - name: KIII_Lab8
+      - name: kiii-lab8
         image: gagal1818/kiii-lab8:1.0
         ports:
         - containerPort: 80
