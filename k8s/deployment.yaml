@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: KIII_Lab8_Deployment
+  labels:
+    app: KIII_Lab8
+spec:
+  replicas: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: KIII_Lab8
+  template:
+    metadata:
+      labels:
+        app: KIII_Lab8
+    spec:
+      containers:
+      - name: KIII_Lab8
+        image: gagal1818/kiii-lab8:1.0
+        ports:
+        - containerPort: 80
