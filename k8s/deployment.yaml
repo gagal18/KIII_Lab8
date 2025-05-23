@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: kiii-lab8
-        image: gagal1818/kiii-lab8:1.0
+        image: gagal1818/kiii-lab8:v1.0
         ports:
         - containerPort: 80
